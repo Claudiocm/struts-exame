@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.custom.i18n.resources"
+		value="ApplicationResources" />
+	<package name="agenda" extends="struts-default">
+		<action name="agendamento"
+			class="br.com.exames.action.AgendamentoAction">
+			<result name="success">/WEB-INF/agendamento/index.jsp</result>
+		</action>
+		<!-- <action name="agendamentos" class="br.com.exames.action.AgendamentoAction" 
+			method="listar"> <result name="success">/WEB-INF/agendamento/index.jsp</result> 
+			</action> -->
+	</package>
+	<package name="exame" extends="struts-default">
+		<action name="exame" class="br.com.exames.action.ExameAction">
+			<result name="success">/WEB-INF/exame/index.jsp</result>
+		</action>
+	</package>
+	<package name="paciente" extends="struts-default">
+		<action name="paciente" class="br.com.exames.action.PacienteAction">
+			<result name="success">/WEB-INF/paciente/index.jsp</result>
+		</action>
+	</package>
+</struts>
